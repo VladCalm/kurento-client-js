@@ -581,7 +581,7 @@ QUnit.asyncTest('Promise', function (assert) {
       return player.getUri(function (error, uri) {
         if (error) return onerror(error);
 
-        assert.equal(rPipeline.id, pipeline.id);
+        assert.equal(rPipeline, pipeline);
 
         // Explicit transaction
         return pipeline.transaction(function () {
